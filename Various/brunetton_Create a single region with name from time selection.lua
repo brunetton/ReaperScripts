@@ -10,7 +10,7 @@ local time_start, time_end = reaper.GetSet_LoopTimeRange(false, false, 0, 0, fal
 if time_end <= time_start then return end
 
 -- Prompt for region name
-local b_valid_name_entered, region_name = reaper.GetUserInputs("", 1, "Enter region name:, extrawidth=250", "" )
+local b_valid_name_entered, region_name = reaper.GetUserInputs("", 1, "Region (from time selection) name:, extrawidth=250", "" )
 
 -- create region
 reaper.AddProjectMarker2(0, true, time_start, time_end, region_name, -1, 0)

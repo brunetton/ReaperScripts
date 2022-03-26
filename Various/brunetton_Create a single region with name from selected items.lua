@@ -12,7 +12,7 @@
 function region_name_prompt_box()
   local region_name_entered = ""
 
-  local b_valid_name_entered, entered_name_value = reaper.GetUserInputs( region_name_entered, 1, "Enter region name:, extrawidth=250", "" )
+  local b_valid_name_entered, entered_name_value = reaper.GetUserInputs( region_name_entered, 1, "Region (from selection) name:, extrawidth=250", "" )
   if b_valid_name_entered then
     return entered_name_value
   else
